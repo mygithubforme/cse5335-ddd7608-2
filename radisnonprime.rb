@@ -7,8 +7,8 @@ radis = Redis.new(:url => "redis://h:p1dv4q35efjgon9s56dur3mi2es@ec2-54-83-199-2
 #abs = radis.hgetall
 #radis.FLUSHALL
 
-puts "Record with non primary key sepal_length =6.7"
-res1= radis.smembers("sepal_length4.9")
+puts "Record with non primary key sepal_length =5.1"
+res1= radis.smembers("sepal_length5.1")
 res1.each do |res|
   res=radis.hgetall("#{res}")
   puts "#{res}"
