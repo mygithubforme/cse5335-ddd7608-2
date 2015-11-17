@@ -6,9 +6,10 @@ radis = Redis.new(:url => "redis://h:p1dv4q35efjgon9s56dur3mi2es@ec2-54-83-199-2
 #radis.set("1","bar")
 #abs = radis.hgetall
 #radis.FLUSHALL
-
-puts "Record with non primary key sepal_length =5.1"
-res1= radis.smembers("sepal_length5.1")
+print "Enter any from 1 to 10 for sepal_length:"
+key=gets.chomp
+puts "Record with non primary key sepal_length =#{key}"
+res1= radis.smembers("sepal_length#{key}")
 res1.each do |res|
   res=radis.hgetall("#{res}")
   puts "#{res}"
