@@ -46,7 +46,7 @@ See dataset file named iris.csv and select sepal_length for non-primary key quer
   
     2) git add .
   
-    3) git commit -m
+    3) git commit -m "Message"
   
     4) git push heroku master
   
